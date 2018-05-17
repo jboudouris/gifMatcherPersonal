@@ -11,15 +11,18 @@
   <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/styles.css">
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
 
+<!-- top bar for navigation -->
   <div class="container">
 
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">gifMatcher</a>
+      <a class="navbar-brand" href="#">gifMatcher
+         <img id="choice" src="images/giphy.png">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,101 +41,83 @@
       </div>
     </nav>
 
-
-
-
+<!-- selected cards on display -->
   <div class="row mt-4 mb-4">
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Player1 Card</h5>
-          <p class="card-img-top" src="images/loading.png">Not yet choosen</p>
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Player2 Card</h5>
-          <p class="card-text">Not yet choosen</p>
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Player3 Card</h5>
-          <p class="card-text">Not yet choosen</p>
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
         </div>
       </div>
     </div>
   </div>
 
+<!-- instruction box -->
   <div class="jumbotron">
-    <h1 class="display-4">Simple. Elegant. Awesome.</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <h1 class="display-5">Pick a card below!</h1>
   </div>
 
+<!-- card choices -->
   <div class="row">
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title</p>
-          <a href="#" class="card-link">Another link</a>
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title</p>
-          <a href="#" class="card-link">Another link</a>
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title</p>
-          <a href="#" class="card-link">Another link</a>
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title</p>
-          <a href="#" class="card-link">Another link</a>
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title</p>
-          <a href="#" class="card-link">Another link</a>
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 
   <!-- <header>
