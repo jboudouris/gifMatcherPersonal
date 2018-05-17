@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 
+
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
@@ -29,3 +30,12 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('default', ['js','serve']);
+
+// Add the WebSocket handlers
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.on('connection', function(client){
+  client.on('event', function(data){});
+  client.on('disconnect', function(){});
+});
+server.listen(3000);

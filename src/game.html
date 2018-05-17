@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>gifMatcher game</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+<!-- top bar for navigation -->
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="./index.html">gifMatcher
+         <img id="choice" src="images/giphy.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<!-- selected cards on display -->
+  <div class="row mt-4 mb-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pending</h5>
+          <img class="card-img-top" src="images/unlocked.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- instruction box -->
+  <div class="jumbotron">
+    <h1 class="display-5">Pick a card below!</h1>
+  </div>
+
+<!-- card choices -->
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <img class="card-img-top" src="images/unlocked.png">
+          <button type="button" class="btn btn-success">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- <header>
+    <div class="logo">
+      <img id="logo" src="images/LOGO.png" />
+  </header>
+
+  <section id="phrase">
+  	<p id= "currentPhrase" style="font-size: 35px;"></p>
+  	<script>randPhrase()</script>
+  	<p id= "judge"></p>
+  	<script>displayJudge()</script>
+  </section>
+
+  <section id="chosen">
+    <div class="row">
+    	<div class="col">
+        <div class="row top">
+        </div>
+        <div class="row bottom">
+          <div class="col">
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row top">
+          <img onclick="cardChoosen('choice1');" class="animated-gif" id="choice1" src="images/loading.png"/>
+        </div>
+        <div class="row bottom">
+          <div class="col">
+            <p id="player"></p>
+            <script>displayPlayer()</script>
+          </div>
+          <div class="col">
+            <p>Score:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row top">
+          <img onclick="cardChoosen('choice2');" class="animated-gif" id="choice2" src="images/loading.png"/>
+        </div>
+        <div class="row bottom">
+          <div class="col">
+            <p id="player"></p>
+            <script>displayPlayer()</script>
+          </div>
+          <div class="col">
+            <p>Score:</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row top">
+          <img onclick="cardChoosen('choice3');" class="animated-gif" id="choice3" src="images/loading.png"/>
+        </div>
+        <div class="row bottom">
+          <div class="col">
+            <p id="player"></p>
+            <script>displayPlayer()</script>
+          </div>
+          <div class="col">
+            <p>Score:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gifs">
+  	<div class="row bottom">
+      <div class="col2">
+        <img onclick="makeSelection('cards1');" class="animated-gif" id="cards1" src=""/>
+      </div>
+      <div class="col2">
+        <img onclick="makeSelection('cards2');" class="animated-gif" id="cards2" src=""/>
+      </div>
+      <div class="col2">
+        <img onclick="makeSelection('cards3');" class="animated-gif" id="cards3" src=""/>
+      </div>
+      <div class="col2">
+        <img onclick="makeSelection('cards4');" class="animated-gif" id="cards4" src=""/>
+      </div>
+      <div class="col2">
+        <img onclick="makeSelection('cards5');" class="animated-gif" id="cards5" src=""/>
+      </div>
+      <script>initializeGame()</script>
+    </div>
+
+
+  </section>
+
+  <footer>
+  	 <div class="row top">
+      <img id="choice" src="images/PoweredBy_200px-Black_HorizLogo.png" />
+    </div>
+  </footer> -->
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
