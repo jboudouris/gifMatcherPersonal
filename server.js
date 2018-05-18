@@ -24,7 +24,19 @@ app.get('/game.html', function(request, response) {
   response.sendFile(path.join(__dirname, 'src/game.html'));
 });
 
+app.get('/game.js', function(request, response) {
+  response.sendFile(path.join(__dirname, 'src/game.js'));
+});
+
 // Starts the server.
 server.listen(5000, function() {
   console.log('Starting server on port 5000');
 });
+
+// // Add the WebSocket handlers
+// io.on('connection', function(socket) {
+// });
+//
+// setInterval(function() {
+//   io.sockets.emit('message', 'hi!');
+// }, 1000);
