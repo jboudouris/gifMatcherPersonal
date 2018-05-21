@@ -28,15 +28,19 @@ app.get('/game.js', function(request, response) {
   response.sendFile(path.join(__dirname, 'src/game.js'));
 });
 
+app.get('/css/styles.css', function(request, response) {
+  response.sendFile(path.join(__dirname, 'src/css/styles.css'));
+});
+
 // Starts the server.
 server.listen(5000, function() {
   console.log('Starting server on port 5000');
 });
 
-// // Add the WebSocket handlers
-// io.on('connection', function(socket) {
-// });
-//
-// setInterval(function() {
-//   io.sockets.emit('message', 'hi!');
-// }, 1000);
+// Add the WebSocket handlers
+io.on('connection', function(socket) {
+});
+
+setInterval(function() {
+  io.sockets.emit('message', 'hi!');
+}, 1000);
