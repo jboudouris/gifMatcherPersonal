@@ -11,7 +11,7 @@
     "jquery": "^3.4.0",
     "node-uuid": "^1.4.8",
     "popper.js": "^1.14.3",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
